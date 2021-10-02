@@ -42,7 +42,7 @@ export default Contact;
 
 const Wrapper = styled(motion.div)`
   width: 100%;
-  height: 90vh;
+  height: 100%;
   position: relative;
   display: block;
   ::after {
@@ -151,6 +151,10 @@ const Wrapper = styled(motion.div)`
         text-transform: uppercase;
         color: white;
         margin: 5rem auto;
+
+        @media only screen and (max-width: 540px) {
+          margin: 1rem auto;
+        }
       }
     }
   }

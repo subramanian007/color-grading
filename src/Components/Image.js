@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import { useHistory } from 'react-router';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Image = ({ id, img, title }) => {
   const history = useHistory();
   return (
     <NewStyle onClick={() => history.push(`/file/${id}`)}>
       <div className="image-div">
-        <img src={img} alt={id} />
+        <LazyLoadImage src={img} alt={id} effect="blur" />
       </div>
       <div className="hidden-box">
         <h1>{title}</h1>

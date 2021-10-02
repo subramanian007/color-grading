@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { data } from './Data';
 import { homeVariants } from './Animate';
 import { motion } from 'framer-motion';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const SingleComponent = () => {
   const { id } = useParams();
@@ -13,7 +14,7 @@ const SingleComponent = () => {
   console.log(otherImages);
   return (
     <Wrapper initial="hidden" animate="visible" variants={homeVariants}>
-      <img src={img} alt={id} />
+      <LazyLoadImage src={img} alt={id} />
       <motion.div
         className="text"
         initial="hidden"
@@ -25,7 +26,7 @@ const SingleComponent = () => {
       </motion.div>
       <div className="additional-images">
         {otherImages.map((image, id) => {
-          return <img src={image} alt="" key={id} />;
+          return <LazyLoadImage src={image} alt="" key={id} />;
         })}
       </div>
       <div className="contact">

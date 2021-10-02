@@ -34,8 +34,12 @@ export default About;
 
 const Wrapper = styled(motion.div)`
   width: 100vw;
-  min-height: 100vh;
+  height: 90vh;
   position: relative;
+
+  @media only screen and (max-width: 650px) {
+    height: 80vh;
+  }
 
   ::after {
     content: '';
@@ -47,7 +51,7 @@ const Wrapper = styled(motion.div)`
     background-image: url('../images/About.jpg');
     background-position: center;
     background-size: cover;
-    filter: blur(10px);
+    filter: blur(3px);
   }
 
   .text-container {
@@ -86,19 +90,15 @@ const Wrapper = styled(motion.div)`
       font-size: 3.5rem;
       text-align: center;
 
-      @media only screen and (max-width: 500px) {
-        font-size: 1.5rem;
-        font-weight: bolder;
-      }
-
       @media only screen and (max-width: 650px) {
         font-size: 2rem;
         margin: 1rem 0rem;
       }
 
       @media only screen and (max-width: 420px) {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         margin: 1rem 0rem;
+        font-weight: bolder;
       }
     }
   }
