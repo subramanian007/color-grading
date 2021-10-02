@@ -17,15 +17,15 @@ const Contact = () => {
         <form action="https://formspree.io/f/xdoybqae" method="POST">
           <div className="input-container">
             <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="name" />
+            <input autocomplete="false" type="text" id="name" name="name" />
           </div>
           <div className="input-container">
             <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" />
+            <input autocomplete="false" type="email" id="email" name="email" />
           </div>
           <div className="input-container">
             <label htmlFor="budget">Budget:</label>
-            <input type="text" id="budget" name="budget" />
+            <input autocomplete="false" type="text" id="budget" name="budget" />
           </div>
           <div className="input-container">
             <label htmlFor="desc">Desc:</label>
@@ -44,6 +44,7 @@ const Wrapper = styled(motion.div)`
   width: 100%;
   height: 90vh;
   position: relative;
+  display: block;
   ::after {
     content: '';
     position: absolute;
@@ -58,6 +59,7 @@ const Wrapper = styled(motion.div)`
   }
 
   .full-form {
+    padding: 10rem 0rem;
     position: relative;
     z-index: 99;
     width: 100%;
@@ -66,23 +68,45 @@ const Wrapper = styled(motion.div)`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: 750px) {
+      margin: 1rem 0rem;
+    }
     h1 {
       font-family: 'Gemunu Libre', sans-serif;
       text-align: center;
       text-transform: uppercase;
       font-size: 5rem;
       color: black;
+
+      @media only screen and (max-width: 750px) {
+        font-size: 5rem;
+      }
+
+      @media only screen and (max-width: 750px) {
+        font-size: 3.5rem;
+        margin: 1rem 0rem 0rem 0rem;
+      }
     }
 
     form {
       color: white;
-      margin: 5rem auto;
+      margin: 5rem 4rem;
       width: 70%;
+
+      @media only screen and (max-width: 750px) {
+        width: 90%;
+      }
       .input-container {
-        width: 70%;
+        width: 80%;
         display: flex;
         justify-content: space-evenly;
         margin-bottom: 4rem;
+        padding: 0;
+
+        @media only screen and (max-width: 750px) {
+          width: 100%;
+        }
 
         label {
           font-size: 3.5rem;
@@ -91,15 +115,27 @@ const Wrapper = styled(motion.div)`
           width: 30%;
           font-weight: bold;
           color: black;
+
+          @media only screen and (max-width: 850px) {
+            width: 50%;
+            font-size: 4rem;
+          }
+
+          @media only screen and (max-width: 540px) {
+            width: 40%;
+            margin-right: 1.5rem;
+            margin-left: 1.2rem;
+            font-size: 3rem;
+          }
         }
         input {
-          width: 60%;
+          width: 70%;
           padding: 1rem 2rem;
           border-radius: 1rem;
           border: none;
         }
         textarea {
-          width: 60%;
+          width: 70%;
           padding: 2rem 2rem;
           border-radius: 1rem;
           border: none;
