@@ -37,10 +37,19 @@ const HeaderStyle = styled.header`
   align-items: center;
   flex-wrap: wrap;
 
+  @media only screen and (max-width: 630px) {
+    display: block;
+  }
+
   h1 {
     font-family: 'Gemunu Libre', sans-serif;
     color: #e0dede;
     transition: all 0.3s;
+    font-size: 3rem;
+
+    @media only screen and (max-width: 630px) {
+      text-align: center;
+    }
 
     :hover {
       color: white;
@@ -50,8 +59,16 @@ const HeaderStyle = styled.header`
   ul {
     list-style: none;
     display: flex;
-    flex-basis: 10rem;
+    flex-basis: 7rem;
     margin-right: 1rem;
+    padding: 0;
+    margin: 0ch;
+
+    @media only screen and (max-width: 630px) {
+      justify-content: space-between;
+      margin-bottom: 1.3rem;
+      margin-right: 0rem;
+    }
 
     a {
       text-decoration: none;
@@ -61,6 +78,11 @@ const HeaderStyle = styled.header`
       font-weight: bold;
       color: #cac4c4;
       position: relative;
+
+      @media only screen and (max-width: 630px) {
+        margin-left: 0rem;
+        padding: 1.5rem;
+      }
 
       ::after {
         position: absolute;
@@ -73,6 +95,10 @@ const HeaderStyle = styled.header`
         border-radius: 10%;
         background-color: #e9a60a;
         transition: width 0.3s ease-in;
+
+        @media only screen and (max-width: 630px) {
+          bottom: 4px;
+        }
       }
 
       :hover {

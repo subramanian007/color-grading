@@ -34,7 +34,7 @@ export default About;
 
 const Wrapper = styled(motion.div)`
   width: 100vw;
-  height: 90vh;
+  min-height: 100vh;
   position: relative;
 
   ::after {
@@ -54,7 +54,15 @@ const Wrapper = styled(motion.div)`
     position: relative;
     padding: 22rem 10rem;
 
-    z-index: 999;
+    @media only screen and (max-width: 650px) {
+      padding: 14rem 5rem;
+    }
+
+    @media only screen and (max-width: 500px) {
+      padding: 10rem 4rem;
+    }
+
+    z-index: 99;
     h1 {
       text-align: center;
       text-transform: uppercase;
@@ -62,11 +70,36 @@ const Wrapper = styled(motion.div)`
 
       font-size: 6.5rem;
       margin: 2rem 0rem;
+
+      @media only screen and (max-width: 500px) {
+        font-size: 4rem;
+        margin: 1rem 0rem;
+      }
+
+      @media only screen and (max-width: 650px) {
+        font-size: 5rem;
+        margin: 1rem 0rem;
+      }
     }
 
     p {
       font-size: 3.5rem;
       text-align: center;
+
+      @media only screen and (max-width: 500px) {
+        font-size: 1.5rem;
+        font-weight: bolder;
+      }
+
+      @media only screen and (max-width: 650px) {
+        font-size: 2rem;
+        margin: 1rem 0rem;
+      }
+
+      @media only screen and (max-width: 420px) {
+        font-size: 1.3rem;
+        margin: 1rem 0rem;
+      }
     }
   }
 `;

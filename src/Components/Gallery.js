@@ -26,6 +26,10 @@ const GalleryStyle = styled.div`
   display: grid;
   grid-gap: 3px;
   grid-template-columns: repeat(3, 1fr);
+
+  @media only screen and (max-width: 630px) {
+    display: block;
+  }
 `;
 
 export default Gallery;

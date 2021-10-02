@@ -15,10 +15,10 @@ body {
     font-family: 'Roboto', sans-serif;
     ::-webkit-scrollbar {
       width: 0rem;
-    }
-     
-    
+    }     
   }
+
+  
 
   h1{
     font-size:3rem;

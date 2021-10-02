@@ -31,6 +31,11 @@ const NewStyle = styled.div`
       transform: scale(1.35);
       transition: all 0.1s ease-in;
 
+      @media only screen and (max-width: 400px) {
+        height: 45rem;
+        object-fit: cover;
+      }
+
       :hover {
         opacity: 0.7;
         transform: scale(1.31);

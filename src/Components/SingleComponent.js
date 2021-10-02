@@ -44,7 +44,12 @@ const Wrapper = styled(motion.div)`
     height: 100vh;
     position: relative;
     object-fit: cover;
+
+    @media only screen and (max-width: 500px) {
+      height: 90vh;
+    }
   }
+
   .text {
     padding: 0rem 3rem;
     h1 {
@@ -54,9 +59,28 @@ const Wrapper = styled(motion.div)`
       position: absolute;
       bottom: 0;
       left: 4rem;
+
+      @media only screen and (max-width: 500px) {
+        left: auto;
+        bottom: -1rem;
+        font-size: 4rem;
+      }
     }
     p {
       font-family: 'Schoolbell', cursive;
+
+      @media only screen and (max-width: 500px) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .additional-images {
+    overflow: hidden;
+
+    img {
+      margin: 0rem;
+      padding: 0rem;
     }
   }
 
