@@ -9,7 +9,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const SingleComponent = () => {
   const { id } = useParams();
-  const { img, title, content, otherImg } = data[id - 1];
+  const { img, title, otherImg } = data[id - 1];
   const otherImages = Object.values(otherImg);
   console.log(otherImages);
   return (
