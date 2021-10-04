@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { variants } from '../Components/Animate';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -14,17 +15,29 @@ const About = () => {
       <div className="text-container">
         <h1>About us</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-          molestias laboriosam voluptatem sed modi itaque amet illum impedit,
-          ratione, aspernatur praesentium possimus delectus deleniti blanditiis
-          ipsum harum! Doloribus quia voluptatibus fuga incidunt sint id
-          necessitatibus dolorem atque beatae nisi labore eveniet accusamus cum,
-          unde ex eaque odit, suscipit ratione tempora ipsam sed autem earum
-          tenetur! Unde optio cupiditate, harum error voluptates pariatur
-          dolorem alias eligendi eum maiores minima quos sunt vel sapiente.
-          Temporibus facilis earum delectus eos perspiciatis? Eveniet fugit
-          perferendis ipsum
+          &#8211; Hi, i am subramanian, a freelance colorist, i have worked as a
+          colorist in shortfilms, commercials, music videos, documentaries and
+          much more.
+          <br /> &#8211; I have been working in fiverr and other freelancing
+          platforms for more than a year now, and there had the entitlement on
+          working in many different types of projects.
+          <br />
+          &#8211; so if you are looking for colorist for your projects,Don't
+          hesitate to contact me with the details about your project
         </p>
+        <div className="buttons">
+          <a
+            href="https://www.fiverr.com/subramanian007/do-video-editing-in-davinci-resolve-16"
+            id="fiverr"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Fiverr
+          </a>
+          <Link id="contact" to="/contact">
+            Contact us
+          </Link>
+        </div>
       </div>
     </Wrapper>
   );
@@ -52,14 +65,54 @@ const Wrapper = styled(motion.div)`
     background-position: center;
     background-size: cover;
     filter: blur(3px);
+    opacity: 50%;
   }
 
   .text-container {
     position: relative;
-    padding: 22rem 10rem;
+    padding: 18rem 10rem;
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      #fiverr {
+        margin-right: 4rem;
+        padding: 1rem 2rem;
+        display: inline-block;
+        background: #19a463;
+        border-radius: 1rem;
+        color: white;
+        transition: background 0.2s ease-in;
+
+        :hover {
+          background: #15c372;
+        }
+      }
+
+      #contact {
+        padding: 1rem 2rem;
+        display: inline-block;
+        background: #d39810;
+        border-radius: 1rem;
+        color: white;
+        transition: background 0.2s ease-in;
+
+        :hover {
+          background: #f1ab07;
+        }
+      }
+    }
 
     @media only screen and (max-width: 650px) {
       padding: 14rem 5rem;
+    }
+
+    @media only screen and (max-width: 1100px) {
+      padding: 7rem 5rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+      padding: 0rem 5rem;
     }
 
     @media only screen and (max-width: 500px) {
@@ -88,7 +141,8 @@ const Wrapper = styled(motion.div)`
 
     p {
       font-size: 3.5rem;
-      text-align: center;
+      filter: drop-shadow(3px 3px 8px #020202);
+      line-height: 5.5rem;
 
       @media only screen and (max-width: 650px) {
         font-size: 2rem;

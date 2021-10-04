@@ -13,7 +13,6 @@ const Contact = () => {
     >
       <div className="full-form">
         <h1>Contact us</h1>
-
         <form action="https://formspree.io/f/xdoybqae" method="POST">
           <div className="input-container">
             <label htmlFor="name">Name:</label>
@@ -53,6 +52,7 @@ const Wrapper = styled(motion.div)`
     width: 100%;
     height: 100%;
     background-image: url('../images/Contact.jpg');
+    opacity: 30%;
     background-position: center;
     background-size: cover;
     filter: blur(4px);
@@ -77,7 +77,7 @@ const Wrapper = styled(motion.div)`
       text-align: center;
       text-transform: uppercase;
       font-size: 5rem;
-      color: black;
+      color: white;
 
       @media only screen and (max-width: 750px) {
         font-size: 5rem;
@@ -113,8 +113,7 @@ const Wrapper = styled(motion.div)`
           margin-right: 5rem;
           align-self: center;
           width: 30%;
-          font-weight: bold;
-          color: black;
+          color: white;
 
           @media only screen and (max-width: 850px) {
             width: 50%;

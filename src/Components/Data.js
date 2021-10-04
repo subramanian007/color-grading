@@ -8,7 +8,7 @@ export const data = [
     },
     title: 'DARK STORY',
     content:
-      'Lorem ipsum dolor sit amet tur adipisicing elit. Voluptatum tempore nobis vero perspiciatis totam ea. Sunt laborum debitis aliquam exercitationem ab, tempore provident laboriosam ut suscipit quas doloribus vero consequatur!',
+      'This movie was shot in red magic and the color was treated as it was quiet a thriller film',
   },
   {
     index: 2,

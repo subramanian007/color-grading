@@ -22,7 +22,6 @@ const SingleComponent = () => {
         variants={homeVariants}
       >
         <h1>{title}</h1>
-        <p>{content}</p>
       </motion.div>
       <div className="additional-images">
         {otherImages.map((image, id) => {
@@ -30,7 +29,7 @@ const SingleComponent = () => {
         })}
       </div>
       <div className="contact">
-        <h2>Having Any Queries</h2>
+        <h2>Need a similar grade? </h2>
         <Link to="/contact"> Contact Us </Link>
       </div>
     </Wrapper>
@@ -68,8 +67,7 @@ const Wrapper = styled(motion.div)`
       }
     }
     p {
-      font-family: 'Schoolbell', cursive;
-
+      font-family: 'BioRhyme', serif;
       @media only screen and (max-width: 500px) {
         font-size: 2rem;
       }
