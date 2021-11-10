@@ -25,7 +25,7 @@ const NewStyle = styled.div`
     width: 100%;
     overflow: hidden;
     img {
-      height: 38rem;
+      height: 40rem;
       width: 100%;
       object-fit: cover;
       opacity: 1;
